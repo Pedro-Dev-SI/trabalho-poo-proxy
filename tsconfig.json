@@ -1,18 +1,18 @@
 {
-    "compilerOptions": {
-        "target": "ES2019",
-        "modules": "CommonJS",
-        "lib": ["ESNext", "DOM"],
-        "outDir": "./dist",
-        "rootDir": "./src",
-        "removeComments": true,
-        "noEmitOnError": true,
-        "stric": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-    },
-    "include": [
-        "./src"
-    ]
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "CommonJS",
+    "lib": ["ESNext", "DOM"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
+    "noEmitOnError": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "./src"
+  ]
 }
