@@ -1,6 +1,6 @@
-import { SystemUserAddressProtocol, SystemUserProtocol } from "../interface/SystemUserInterface";
+import { UserAddresses, User } from "../interface/User";
 
-export class AdminUser implements SystemUserProtocol {
+export class AdminUser implements User {
 
   public name: string;
   public userName: string
@@ -10,13 +10,24 @@ export class AdminUser implements SystemUserProtocol {
     this.userName = userName;
   }
 
-  async getAddresses(): Promise<SystemUserAddressProtocol[]>{
+  /**
+   * Método async por retornar uma promise.
+   */
+  async getAddresses(): Promise<UserAddresses[]>{
     return new Promise((resolve, reject) => {
       return setTimeout(() => {
         return resolve([
           {street: 'Rua Cmd Motta', number: 34},
           {street: 'Av Teixeira', number: 200},
         ])
+      }, 3000);
+    })
+  }
+
+  async getInfo(): Promise<String>{
+    return new Promise((resolve, reject) => {
+      return setTimeout(() => {
+        return resolve(`Nome do usuário: ${this.name}`);
       }, 3000);
     })
   }
